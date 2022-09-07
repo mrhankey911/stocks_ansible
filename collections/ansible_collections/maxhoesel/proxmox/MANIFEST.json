@@ -1,0 +1,38 @@
+{
+ "collection_info": {
+  "namespace": "maxhoesel",
+  "name": "proxmox",
+  "version": "4.3.0",
+  "authors": [
+   "Max H\u00f6sel <ansible@maxhoesel.de>"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "proxmox",
+   "lxc",
+   "kvm",
+   "virtualization",
+   "pbs"
+  ],
+  "description": "Collection dealing with Proxmox VE and BS hosts",
+  "license": [
+   "GPL-3.0-or-later"
+  ],
+  "license_file": null,
+  "dependencies": {
+   "ansible.posix": ">=1.0,<2.0"
+  },
+  "repository": "https://github.com/maxhoesel-ansible/ansible-collection-proxmox",
+  "documentation": null,
+  "homepage": null,
+  "issues": "https://github.com/maxhoesel-ansible/ansible-collection-proxmox/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "0c35c33bfa542a5fb45ddf0f7d09ddaced15830062309db37c3c46ed44b47e64",
+  "format": 1
+ },
+ "format": 1
+}

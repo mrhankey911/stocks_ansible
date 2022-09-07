@@ -1,0 +1,16 @@
+- name: Manage proxmox services
+  hosts: proxmox
+  become: yes
+  gather_facts: true
+  collections:
+    - community.general.proxmox
+  vars:
+    - proxmox_physnet: eth0
+    - proxmox_bridge: vmbr0
+    - proxmox_ip: 192.168.1.198 
+    - proxmox_mask: 255.255.255.0
+    - proxmox_gateway: 192.168.1.198
+    - proxmox_hostname_fdqn: proxmox.istocs.local
+  roles:
+    - tenhishadow.pve_on_debian
+

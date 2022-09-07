@@ -1,0 +1,7 @@
+---
+collections:
+- community.general
+- community.mongodb
+- maxhoesel.proxmox
+roles:
+- brianshumate.vault

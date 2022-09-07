@@ -1,0 +1,14 @@
+- name: Manage proxmox services
+  hosts: proxmox
+  become: yes
+  gather_facts: true
+  environment: '{{ inventory__environment | d({})
+                   | combine(inventory__group_environment | d({}))
+                   | combine(inventory__host_environment  | d({})) }}'
+  collections:
+    - community.general.proxmox
+  tasks: 
+    - name: Create lxc containers
+      community.general.proxmox: "{{ item.value }}"
+      with_dict: "{{ lxc_containers }}"
+

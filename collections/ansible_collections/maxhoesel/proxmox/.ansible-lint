@@ -1,0 +1,9 @@
+# Don't automatically install roles from galaxy
+offline: true
+
+exclude_paths:
+  - tests/integration/targets/
+  - .github/
+
+skip_list:
+  - 'fqcn-builtins'

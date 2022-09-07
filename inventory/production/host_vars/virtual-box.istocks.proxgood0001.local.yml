@@ -1,0 +1,29 @@
+---
+lxc_containers:
+  psql0001-itsocks:
+    node: proxmox
+    api_user: root@pam
+    api_password: 123456789
+    api_host: proxmox
+    password: 123456789
+    hostname: 192.148.1.198
+    searchdomain: dev.goodwix.team
+    nameserver: 192.148.1.198 #test address for VM
+    memory: 2048
+    cpuunits: 1024
+    cpus: 2
+    netif: '{"net0":"name=eth0,ip=dhcp,ip6=dhcp,bridge=vmbr0"}'
+    ostemplate: 'local:vztmpl/ubuntu-22.04-standard_22.04-1_amd64.tar.zst'
+  psql0002-itsocks:
+    node: proxmox
+    api_user: root@pam
+    api_password: 123456789 
+    api_host: proxmox
+    password: 123456789
+    hostname: psql0002-itsocks
+    searchdomain: dev.goodwix.team
+    nameserver: 192.148.1.198 #test address for VM
+    memory: 2048
+    cpuunits: 1024
+    cpus: 2
+    ostemplate: 'local:vztmpl/ubuntu-22.04-standard_22.04-1_amd64.tar.zst'

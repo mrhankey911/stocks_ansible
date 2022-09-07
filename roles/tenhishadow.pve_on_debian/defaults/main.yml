@@ -1,0 +1,8 @@
+---
+
+pve_repo_keyurl: "http://download.proxmox.com/debian/proxmox-release-bullseye.gpg"
+pve_repo_keyring: "/etc/apt/trusted.gpg.d/proxmox-release-bullseye.gpg"
+disable_pve_enterprise: yes
+add_pve-no-subscription: yes
+pve_skip_configure_network: yes
+...
