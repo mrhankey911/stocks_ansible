@@ -3,10 +3,10 @@
   collections:
      - community.mongodb
   vars:
-    specific_mongodb_version: "6.0.0"
+          #specific_mongodb_version: "4.4"
+    mongodb_version: "4.4"
   roles:
      - role: mongodb_linux
      - role: mongodb_repository
-       mongodb_version: "6.0"
      - role: mongodb_install
      - role: mongodb_mongod
