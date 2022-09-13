@@ -4,4 +4,3 @@ collections:
 - community.mongodb
 - maxhoesel.proxmox
 roles:
-- brianshumate.vault
