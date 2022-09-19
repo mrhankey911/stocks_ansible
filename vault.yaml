@@ -3,7 +3,13 @@
   hosts: vault
   become: yes
   gather_facts: yes
-
+  vars:
+    vault_unseal_keys:
+      - x1HY+Y+7VeNhVR/I0Tx8r7bFVJrnzLiM3ImLALVjw8S8
+      - 4K2M90rdSaQcRP4IvlsXiHTNXUAzQnlXTAjQk7EGRy
+      - vbybU5B/50Z6U1S37T+LeTCdYLrUutpSAZP0Ze0QAcsT
+      - dZMsSj5bG+ldIWyy2VtXRT/PQHKmLlawVqPWWNv5N1Rh
+      - ydqNK5nQ+JnCaWq1qGOeMUQMoiVX3YEbWCDvbcDf+fie
   roles:
     - role: robertdebock.bootstrap
     - role: robertdebock.core_dependencies
