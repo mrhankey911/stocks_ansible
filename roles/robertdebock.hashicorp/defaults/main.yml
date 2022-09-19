@@ -4,7 +4,7 @@
 # You can select how to intall hashicorp products. Choose from `package` or
 # `manual`. `manual` means this role wil download from
 # "https://releases.hashicorp.com/vault/".
-hashicorp_installation_method: package
+hashicorp_installation_method: manual
 
 # You can install hashicorp products using this list.
 # hashicorp_products:

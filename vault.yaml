@@ -1,0 +1,20 @@
+---
+- name: prepare
+  hosts: vault
+  become: yes
+  gather_facts: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: robertdebock.core_dependencies
+    - role: robertdebock.hashicorp
+      hashicorp_installation_method: manual
+      hashicorp_products:
+        - name: vault
+          version: "1.11.2"
+          type: oss
+    - role: robertdebock.vault
+      vault_show_unseal_information: yes
+      vault_store_root_token: yes
+      vault_make_backup: yes
+      tags: vault
