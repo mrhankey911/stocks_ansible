@@ -5,11 +5,9 @@
   gather_facts: yes
   vars:
     vault_unseal_keys:
-      - x1HY+Y+7VeNhVR/I0Tx8r7bFVJrnzLiM3ImLALVjw8S8
-      - 4K2M90rdSaQcRP4IvlsXiHTNXUAzQnlXTAjQk7EGRy
-      - vbybU5B/50Z6U1S37T+LeTCdYLrUutpSAZP0Ze0QAcsT
-      - dZMsSj5bG+ldIWyy2VtXRT/PQHKmLlawVqPWWNv5N1Rh
-      - ydqNK5nQ+JnCaWq1qGOeMUQMoiVX3YEbWCDvbcDf+fie
+      - 9rwyDxsLTvwgLoaCIg/5X6N9WZp66uJrAXY3bQYJnkRS
+      - SayIrnTRuNKXJZH6u/7IFaavkg7gFubrZLIaQonp8dV7
+      - plMyLA2n0aRVJNzwmUH1EDoWI9JTXmG3XBniMd0w0R19
   roles:
     - role: robertdebock.bootstrap
     - role: robertdebock.core_dependencies
