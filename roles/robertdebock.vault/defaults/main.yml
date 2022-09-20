@@ -23,7 +23,7 @@ vault_disable_clustering: "false"
 # The leader to use, please use a fqdn, i.e. `vault.example.com`
 # This variable is not required for single-node installations, where the
 # variable `vault_disable_clustering` is set to `"True"`.
-vault_leader: test.vault-leader.ru
+vault_leader: 192.168.1.34
 
 # The URL where cluster members can find the leader.
 vault_cluster_addr: "http://{{ vault_leader | default('localhost') }}:8201"

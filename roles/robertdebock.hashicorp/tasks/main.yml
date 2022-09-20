@@ -56,7 +56,7 @@
   when:
     - hashicorp_installation_method == "package"
 
-- name: Check that the somefile.conf exists
+- name: Check that the /usr/bin/vault exists
   stat:
     path: /usr/bin/vault
   register: stat_result
