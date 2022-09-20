@@ -1,0 +1,11 @@
+---
+- name: converge
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  roles:
+    - role: robertdebock.vault
+      vault_show_unseal_information: yes
+      vault_store_root_token: yes
+      vault_make_backup: yes
