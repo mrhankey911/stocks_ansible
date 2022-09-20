@@ -3,7 +3,13 @@
   hosts: all
   become: yes
   gather_facts: yes
-
+  vars:
+   vault_unseal_keys:
+     - cl+Zv7XVWeG6g20FXNYX+yJf8ApHgtbyQ9gNdAHIldP/
+     - vC1lQtpaNakASBS/lCiwct7NYK9ZY2id2GTWFbV0fntk
+     - W3Lk3gUfVthz7kgiAbUom2IHZeIMXrqIOsC+Z+t72g1o
+     - TYP6YwtOD3ZT7wWv+dN6dJdgPKL2thzR/HEmjUie0i8D
+     - whoAWE8sCoQqm2t6UTytdga8Mrz6BrVW60LXlZNfaNy4
   roles:
     - role: robertdebock.vault
       vault_show_unseal_information: yes
