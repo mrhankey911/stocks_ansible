@@ -23,13 +23,13 @@ vault_disable_clustering: "false"
 # The leader to use, please use a fqdn, i.e. `vault.example.com`
 # This variable is not required for single-node installations, where the
 # variable `vault_disable_clustering` is set to `"True"`.
-vault_leader: 192.168.1.34
+vault_leader: test.vault-leader.ru
 
 # The URL where cluster members can find the leader.
 vault_cluster_addr: "http://{{ vault_leader | default('localhost') }}:8201"
 
 # The URL where the API will be served. This is the API of a local instance.
-vault_api_addr: "http://0.0.0.0:8200"
+vault_api_addr: "http://{{ ansible_host }}:8200"
 
 # The plugin plugin directory.
 vault_plugin_directory: /usr/local/lib/vault/plugins
@@ -43,8 +43,8 @@ vault_storages:
 # Where vault should listen on.
 vault_listeners:
   - name: tcp
-    address: "0.0.0.0:8200"
-    cluster_address: "0.0.0.0:8201"
+    address: "{{ ansible_host }}:8200"
+    cluster_address: "{{ ansible_host }}:8201"
     tls_disable: "true"
     tls_cert_file: "fullchain.pem"
     tls_key_file: "privkey.pem"
@@ -75,7 +75,7 @@ vault_disable_mlock: "true"
 vault_make_backup: no
 
 # Where should backups be saved? A full path, including file, for example:
-#vault_backup_path: /tmp/my_backup.yml
+# vault_backup_path: /tmp/my_backup.yml
 vault_backup_path: "/root/vault-raft_{{ ansible_date_time.date }}-{{ ansible_date_time.hour }}{{ ansible_date_time.minute }}.snapshot"
 
 # To provision resources, a namespace can be set.

@@ -34,7 +34,9 @@ seal "transit" {
 max_lease_ttl      = "{{ vault_max_lease_ttl }}"
 default_lease_ttl  = "{{ vault_default_lease_ttl }}"
 api_addr           = "{{ vault_api_addr }}"
-cluster_addr       = "{{ vault_cluster_addr }}"
+{% for listener in vault_listeners %}
+cluster_addr       = "http://{{ listener.cluster_address  }}"
+{% endfor %}
 {% if vault_disable_cache is defined %}
 disable_cache      = {{ vault_disable_cache }}
 {% endif %}

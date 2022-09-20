@@ -4,12 +4,6 @@
   become: yes
   gather_facts: yes
   vars:
-    vault_unseal_keys:
-      - MGoLla1PlzE2X9m0a63bUmWYjdghOghTbnFQrXPuMbpT
-      - H+rbiG7bLqSIfdFMlpGOZi7LGFTIiXbuUKDxWRucaTd7
-      - g/XMtIXN+2aM2JsKHL1fR9J7oOB7T70in/6lMxytCLkl
-      - h1ddmuD1i967Tlg2LD1PpNGT2HVSg/ZbmqjnonDKZ+p6
-      - 7w/19QiqI/vSYTi8Ejcs1+uwGs8MdtX7zc1IVBhkFdZW
   roles:
     - role: robertdebock.vault
       vault_show_unseal_information: yes
