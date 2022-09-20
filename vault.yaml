@@ -15,3 +15,8 @@
       vault_show_unseal_information: yes
       vault_store_root_token: yes
       vault_make_backup: no
+      vault_kv_secrets:
+        - name: my-secret
+          data:
+            foo: bar
+            zip: zap
